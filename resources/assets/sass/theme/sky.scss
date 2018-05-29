@@ -1,0 +1,47 @@
+/**
+ * Sky theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "./template/mixins";
+@import "./template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,700,700i,900);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Fira Sans', sans-serif;
+$mainColor: #333;
+$headingFont: 'Fira Sans', sans-serif;
+$headingColor: #333;
+$headingTextShadow: none;
+$headingFontWeight: 900;
+$headingLineHeight: 1.2;
+$headingTextTransform: none;
+$backgroundColor: #535d69;
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Fix links so they are not cut off
+.reveal a {
+	line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	background-image: url('/img/bg.png');
+}
+
+
+
+// Theme template ------------------------------
+@import "./template/theme";
+// ---------------------------------------------
